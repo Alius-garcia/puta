@@ -17,9 +17,15 @@ Route::get('/ropa', function () {
         "cantidad"=>50
     ],
     [
+        "nombre"=>'tops',
+        "cantidad"=>24
+    ],
+    [
         "nombre"=>'pantalones',
         "cantidad"=>70
-    ]];
+    ]
+
+];
     return view('ropa/listado_de_stock')->with('ropita', $stock);
     // return  view ('ropa/listado_de_stock')->with("ropa", $stock)
 });
