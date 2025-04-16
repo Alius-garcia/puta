@@ -7,8 +7,22 @@ Route::get('/', function () {
 });
 
 
-Route::get('/hombre', function () {
-    return "hola";
+Route::get('/ropa', function () {
+    $stock= [[
+        "nombre" =>'vestidos',
+        "cantidad"=>20
+    ],
+    [
+        "nombre"=>'zapatos',
+        "cantidad"=>50
+    ],
+    [
+        "nombre"=>'pantalones',
+        "cantidad"=>70
+    ]];
+    return view('ropa/listado_de_stock')->with('ropita', $stock);
+    // return  view ('ropa/listado_de_stock')->with("ropa", $stock)
 });
 
 ?>
+
